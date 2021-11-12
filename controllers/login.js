@@ -5,11 +5,11 @@ const config = require('../config')
 const userServices = require('../services').user
 const { InvalidQueryError } = require('../lib/error')
 const login = {}
-const fs = require('fs')
-var process = require('child_process');
+// const fs = require('fs')
+// var process = require('child_process')
 
-login.login = async (ctx, next) => {
-  const {userName, password} = ctx.request.body
+login.login = async(ctx, next) => {
+  const { userName, password } = ctx.request.body
   if (!userName || !password) {
     throw new InvalidQueryError()
   }
@@ -17,7 +17,6 @@ login.login = async (ctx, next) => {
     userName: userName,
     password: password
   })
-
 
   // try {
   //   const data = fs.writeFileSync('/Users/user/Desktop/ztt-ly/dcp/dist/test.html', content)
@@ -41,7 +40,7 @@ login.login = async (ctx, next) => {
     ctx.result = jwt.sign({
       data: user._id,
       // 设置 token 过期时间
-      exp: Math.floor(Date.now() / 1000) + (60 * 60), // 60 seconds * 60 minutes = 1 hour
+      exp: Math.floor(Date.now() / 1000) + (60 * 60) // 60 seconds * 60 minutes = 1 hour
     }, config.secret)
   }
   return next()

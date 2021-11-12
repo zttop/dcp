@@ -1,0 +1,48 @@
+{
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.requireConfig": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "eslint.options": {
+      "extensions": [
+          ".js",".ts",".vue"
+      ]
+  },
+  "eslint.enable":true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+  },
+  "explorer.confirmDelete": false,
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "todohighlight.isEnable": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "terminal.integrated.automationShell.linux": "",
+  "gitlens.advanced.blame.customArguments": [],
+  "editor.fontLigatures": null,
+  "editor.semanticTokenColorCustomizations": null,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "build/": true,
+      "temp/": true,
+      "library/": true,
+      "**/*.anim": true
+  },
+  "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/*.meta": true,
+      "library/": true,
+      "local/": true,
+      "temp/": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}

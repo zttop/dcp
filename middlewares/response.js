@@ -26,7 +26,7 @@ const errorHandler = (ctx, next) => {
       msg: err.message.trim()
     }
     // 保证返回状态是 200
-    ctx.status = 200 
+    ctx.status = 200
     return Promise.resolve()
   })
 }

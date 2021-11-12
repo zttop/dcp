@@ -4,7 +4,7 @@ const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')()
 const staticCache = require('koa-static-cache')
 const cors = require('koa2-cors')
-const helmet = require("koa-helmet")
+const helmet = require('koa-helmet')
 
 const config = require('./config')
 const publicRouter = require('./routes/public')

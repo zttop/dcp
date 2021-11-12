@@ -7,7 +7,7 @@ const user = {
    * @params: { Object } userData
    * @return: { Object | null }
    */
-  async login (userData) {
+  async login(userData) {
     return await User.findOne(userData)
   }
 }

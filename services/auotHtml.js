@@ -1,6 +1,6 @@
 
 const fs = require('fs')
-const { exec } = require('child_process');
+const { exec } = require('child_process')
 
 const content = `
 
@@ -800,12 +800,11 @@ const autoHtml = {
   async autnupload() {
     try {
       const data = fs.writeFileSync('../dist/test.html', content)
-      //file written successfully
+      // file written successfully
       console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
       console.log(data)
 
-      exec('npm run upload');
-
+      exec('npm run upload')
     } catch (err) {
       console.error(err)
     }

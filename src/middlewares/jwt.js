@@ -13,10 +13,12 @@ module.exports = function(ctx, next) {
       const token = ctx.request.headers.authorization
       ctx.jwtData = jwt.verify(token, config.secret)
     } else {
-      throw new Error({ code: 401, message: 'no authorization' })
+      // eslint-disable-next-line no-throw-literal
+      throw { code: 401, message: 'no authorization' }
     }
   } catch (err) {
-    throw new Error({ code: 401, message: err.message })
+    // eslint-disable-next-line no-throw-literal
+    throw { code: 401, message: err.message }
   }
   next()
 }

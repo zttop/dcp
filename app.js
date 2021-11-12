@@ -23,9 +23,9 @@ app.use(errorHandler)
 
 // Global Middlewares
 app.use(bodyParser)
-app.use(staticCache(config.publicDir))
+app.use(staticCache(config.publicDir)) // 静态资源缓存策略
 
-// Helmet
+// Helmet http安全校验
 app.use(helmet())
 
 // Cors

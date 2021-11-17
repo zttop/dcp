@@ -8,8 +8,6 @@ const user = {
    * @return: { Object | null }
    */
   async login(userData) {
-    console.log(User)
-    console.log('-=-=-=-User-=-=-=-=-')
     return await User.findOne({ where: userData })
   }
 }

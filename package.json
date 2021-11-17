@@ -1,0 +1,39 @@
+{
+  "name": "dcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "dev": "pm2 start pm2.config.js --env dev",
+    "test": "pm2 start pm2.config.js --env test",
+    "pro": "pm2 start pm2.config.js --env pro",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop pm2.config.js",
+    "upload": "upload",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint --fix \"src/**/*.js\""
+  },
+  "author": "tingting2.zheng@ly.com",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.3",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cors": "0.0.16",
+    "koa-helmet": "^6.1.0",
+    "koa-jwt": "^4.0.3",
+    "koa-router": "^10.1.1",
+    "koa-static-cache": "^5.1.4",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.3.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "sequelize-cli": "^6.3.0"
+  }
+}

@@ -12,29 +12,7 @@ if (!fs.existsSync(logsDir)) {
 }
 
 // 配置log4.js
-log4js.configure({
-  pm2: true,
-  appenders: {
-    console: { type: 'console' },
-    dateFile: {
-      type: 'dateFile',
-      filename: config.logPath,
-      pattern: 'yyyy-MM-dd',
-      // 回滚旧的日志文件时，保证以 .log 结尾 （只有在 alwaysIncludePattern 为 false 生效）
-      keepFileExt: true,
-      // 输出的日志文件名是都始终包含 pattern 日期结尾
-      alwaysIncludePattern: true,
-      // 指定编码格式为 utf-8
-      encoding: 'utf-8'
-    }
-  },
-  categories: {
-    default: {
-      appenders: ['console', 'dateFile'],
-      level: 'info'
-    }
-  }
-})
+log4js.configure(config.logConfig)
 
 const logger = log4js.getLogger('[Default]')
 

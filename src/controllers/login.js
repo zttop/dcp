@@ -18,21 +18,6 @@ login.login = async(ctx, next) => {
     password: password
   })
 
-  // try {
-  //   const data = fs.writeFileSync('/Users/user/Desktop/ztt-ly/dcp/dist/test.html', content)
-  //   console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
-  //   console.log(data)
-  //   const res = process.exec('npm run upload', {encoding: 'UTF-8'}, (A)=>{
-  //     console.log(A)
-  //     console.log('OPOPOPOPOPOPOP')
-  //   })
-  //   console.log('-=-=-=-=-=-=-=1-=-=-=-=-=-=-=')
-  //   console.log(res)
-
-  // } catch (err) {
-  //   console.error(err)
-  // }
-
   if (!user) {
     ctx.result = ''
     ctx.msg = '用户不存在'
@@ -43,6 +28,7 @@ login.login = async(ctx, next) => {
       exp: Math.floor(Date.now() / 1000) + (60 * 60) // 60 seconds * 60 minutes = 1 hour
     }, config.secret)
   }
+
   return next()
 }
 

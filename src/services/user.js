@@ -1,4 +1,4 @@
-const User = require('../models/index').getModel('user')
+const User = require('../sequelize/models/index').getModel('user')
 
 const user = {
   /**
@@ -8,7 +8,9 @@ const user = {
    * @return: { Object | null }
    */
   async login(userData) {
-    return await User.findOne(userData)
+    console.log(User)
+    console.log('-=-=-=-User-=-=-=-=-')
+    return await User.findOne({ where: userData })
   }
 }
 

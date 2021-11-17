@@ -17,6 +17,7 @@ const responseHandler = (ctx) => {
 // 这个middleware处理在其它middleware中出现的异常,我们在next()后面进行异常捕获，出现异常直接进入这个中间件进行处理
 const errorHandler = (ctx, next) => {
   return next().catch(err => {
+    console.log('-=-=-=-=-=-=log-=-=-=-=', err)
     if (err.code == null) {
       logger.error(err.stack)
     }
